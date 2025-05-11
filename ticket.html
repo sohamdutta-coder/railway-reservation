@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Reservation System</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: #fff;
+        }
+
+        form {
+            width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="number"] {
+            width: 50%;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: gray;
+        }
+
+        #q {
+            width: 100px;
+            height: 40px;
+        }
+
+        .content-table {
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9em;
+            min-width: 1000px;
+        }
+
+        .content-table thead tr {
+            color: black;
+            font-weight: bold;
+        }
+
+        .content-table thead th,
+        td {
+            padding: 12px 15px;
+            text-align: center;
+        }
+
+        .edit {
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        #B {
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        a {
+            color: white;
+        }
+
+        tr {
+            height: 40px;
+        }
+
+        .container button {
+            background-color: transparent;
+            color: white;
+            border: 0;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="header">
+        <a href="#"><img src="assets/logo2.png" width="100" height="50" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="welcome.html">Home</a></li>
+                <li><a class="active" href="ticket.html">Tickets</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="logout.php"><button class="login">LogOut</button></a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+        <h1>Rail Ticket Booking</h1>
+
+        <table class="content-table" cellpadding="5px">
+            <thead>
+                <tr>
+                    <th>Train Number</th>
+                    <th>Train Name</th>
+                    <th>Departure Time</th>
+                    <th>Arrival Time</th>
+                    <th>Seat Available</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Express 1</td>
+                    <td>08:00 AM</td>
+                    <td>12:00 PM</td>
+                    <td>25</td>
+                    <td><p id="B"><a href="Book1.php"><button>Book Now</button></a></p></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Express 2</td>
+                    <td>09:00 AM</td>
+                    <td>01:00 PM</td>
+                    <td>0</td>
+                    <td><p id="B">Not Available</p></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Superfast 1</td>
+                    <td>10:00 AM</td>
+                    <td>02:00 PM</td>
+                    <td>10</td>
+                    <td><p id="B"><a href="Book3.php"><button>Book Now</button></a></p></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Superfast 2</td>
+                    <td>11:00 AM</td>
+                    <td>03:00 PM</td>
+                    <td>0</td>
+                    <td><p id="B">Not Available</p></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Local 1</td>
+                    <td>12:00 PM</td>
+                    <td>04:00 PM</td>
+                    <td>18</td>
+                    <td><p id="B"><a href="Book5.php"><button>Book Now</button></a></p></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="assets/logo2.png" width="100" height="50" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> Garden Reach Road, SE Railway North Colony, Kolkata, West Bengal 700043</p>
+            <p><strong>Phone:</strong> (033)25430108</p>
+            <p><strong>Hours:</strong> 10:15 to 18:20 Hrs, Mon - Sun</p>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms and Conditions</a>
+            <a href="#">Contact Us</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">Track my Train</a>
+            <a href="#">Ticket Confirmation</a>
+        </div>
+
+        <div class="install">
+            <h4>Install App</h4>
+            <p>From App Store or Google Play</p>
+            <div class="row">
+                <img src="assets/app.jpg">
+                <img src="assets/play.jpg">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="assets/pay.png">
+        </div>
+
+        <div class="copyright">
+            <p>©2024, Railway Management System, SD13, RN61626364</p>
+        </div>
+    </footer>
+</body>
+
+</html>
